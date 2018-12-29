@@ -31,7 +31,7 @@
 <ul>
 <li><h4 id="第二组："><a href="#第二组：" class="headerlink" title="第二组："></a>第二组：</h4></li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[<span class="literal">null</span>] == <span class="string">""</span>;  <span class="comment">//true</span></span><br><span class="line">[<span class="literal">null</span>] == <span class="number">0</span>;   <span class="comment">//true</span></span><br><span class="line">[<span class="literal">undefined</span>] == <span class="string">""</span>;  <span class="comment">//true</span></span><br><span class="line">[<span class="literal">undefined</span>] == <span class="number">0</span>;   <span class="comment">//true</span></span><br><span class="line">[[[<span class="literal">null</span>]]] == <span class="number">0</span>;    <span class="comment">//true</span></span><br><span class="line">[[[<span class="literal">null</span>]]] == <span class="string">""</span>;   <span class="comment">//true</span></span><br><span class="line"><span class="comment">//undefined 类似</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><h4 id="第三组："><a href="#第三组：" class="headerlink" title="第三组："></a>第三组：</h4></li>
 </ul>
@@ -59,7 +59,10 @@
 <h3 id="关于这个也是有解释的"><a href="#关于这个也是有解释的" class="headerlink" title="关于这个也是有解释的"></a>关于这个也是有解释的</h3><p><strong>如果两个值类型相同，就直接比较；如果两个值类型不同，则尝试将他们转化为相同的类型，在进行比较</strong></p>
 <p>这也就是为什么<code>666 == “666”</code></p>
 <p>所以有时候要用严格相等运算符<code>===</code></p>
+<blockquote>
 <p>其实，只要你明白转换是在何时以及如何进行，JavaScript自动类型转换通常是件好事</p>
+<p>​                                                        ——Head First JS</p>
+</blockquote>
 <ul>
 <li>JS真神奇(sha diao)</li>
 <li>自己写的时候特别开心 =w=</li>
