@@ -12,7 +12,7 @@
 <p>方式1：浏览器提交请求—&gt;下载网页代码—&gt;解析成页面</p>
 <p>方式2：模拟浏览器发送请求(获取网页代码)-&gt;提取有用的数据-&gt;存放于数据库或文件中</p>
 <p>爬虫要做的就是方式2；</p>
-<p><img src="C:\Users\12053\Desktop\爬虫2.assets\1122865-20171109155753419-1411600537.png" alt="img"></p>
+  <img src="/2019/06/07/python爬虫入门原理/1122865-20171109155753419-1411600537.png" title="爬虫原理">
 <p><strong>1、发起请求</strong></p>
 <p>使用http库向目标站点发起请求，即发送一个Request</p>
 <p>Request包含：请求头、请求体等 </p>
@@ -48,7 +48,7 @@
 <p>User-agent：请求头中如果没有user-agent客户端配置，服务端可能将你当做一个非法用户host；</p>
 <p>cookies：cookie用来保存登录信息（我这个截图刚好没有）</p>
 <p>注意： 一般做爬虫都会加上请求头</p>
-<p><img src="C:\Users\12053\Desktop\爬虫2.assets\1559875401666.png" alt="1559875401666"></p>
+  <img src="/2019/06/07/python爬虫入门原理/1559875401666.png" title="爬虫原理">
 <p><strong>请求头需要注意的参数：</strong></p>
 <p>（1）Referrer：访问源至哪里来（一些大型网站，会通过Referrer 做防盗链策略；所有爬虫也要注意模拟）</p>
 <p>（2）User-Agent:访问的浏览器（要加上否则会被当成爬虫程序）</p>
@@ -63,7 +63,7 @@
 <p>　　403：无权限访问</p>
 <p>　　502：服务器错误</p>
 <p><strong>2、respone header</strong></p>
-<p><img src="C:\Users\12053\Desktop\爬虫2.assets\1559875668406.png" alt="1559875668406"></p>
+  <img src="/2019/06/07/python爬虫入门原理/1559875668406.png" title="爬虫原理">
 <p><strong>响应头需要注意的参数：</strong></p>
 <p>（1）Set-Cookie:BDSVRTM=0; path=/：可能有多个，是来告诉浏览器，把cookie保存下来</p>
 <p>（2）Content-Location：服务端响应头中包含Location返回浏览器之后，浏览器就会重新访问另一个页面</p>
