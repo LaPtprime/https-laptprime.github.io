@@ -1,0 +1,113 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="新手向 网络爬虫教程"><meta name="keywords" content="Python"><meta name="author" content="laptprime,1205319729@qq.com"><meta name="copyright" content="laptprime"><link rel="shortcut icon" href="favicon.ico"><title>新手向 网络爬虫教程 | welcome to lambor's blog</title><link rel="shortcut icon" href="/my-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.5.6"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css?version=1.5.6"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><link rel="shortcut icon" href="favicon.ico"><link rel="manifest" href="/manifest.json"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#000000"><meta name="msapplication-TileColor" content="#000000"><link rel="mask-icon" color="#000000"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script></head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#第一个爬虫"><span class="toc-number">1.</span> <span class="toc-text">第一个爬虫</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#无语言爬虫"><span class="toc-number">2.</span> <span class="toc-text">无语言爬虫</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#web-scraper"><span class="toc-number">2.0.1.</span> <span class="toc-text">web scraper</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#python-爬虫"><span class="toc-number">3.</span> <span class="toc-text">python 爬虫</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第一个实战："><span class="toc-number">4.</span> <span class="toc-text">第一个实战：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#爬虫第一步：观察这个网站"><span class="toc-number">4.0.1.</span> <span class="toc-text">爬虫第一步：观察这个网站</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#于是，有了思路："><span class="toc-number">4.0.2.</span> <span class="toc-text">于是，有了思路：</span></a></li></ol></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://i.ibb.co/2nKPjcx/ef12afc6196939c7fb84efa8c3d675b6148ea832-jpg-1320w-742h.jpg"></div><div class="author-info__name text-center">laptprime</div><div class="author-info__description text-center">路还很长。。。</div><div class="follow-button"><a href="https://github.com/LaPtprime" target="_blank">Follow</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">20</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">4</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://i.ibb.co/tqymjRv/banner.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">welcome to lambor's blog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="post-info"><div id="post-title">新手向 网络爬虫教程</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-06-07</time></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>这几天学习了一下爬虫，在这之前我是从来没有接触过python的，但是别慌，爬虫门槛极低</p>
+<p>这也是我写的第一篇长教程</p>
+<h1 id="第一个爬虫"><a href="#第一个爬虫" class="headerlink" title="第一个爬虫"></a>第一个爬虫</h1><p>很多人一听爬虫，就会想到python，但是除python之外，爬虫的方法还是有很多的。</p>
+<h1 id="无语言爬虫"><a href="#无语言爬虫" class="headerlink" title="无语言爬虫"></a>无语言爬虫</h1><p>（自己瞎起的名，若有雷同，纯属巧合）</p>
+<p>无语言？无语言还能做爬虫？答案是：能，而且效果还比我这种刚入门python写的好。</p>
+<h3 id="web-scraper"><a href="#web-scraper" class="headerlink" title="web scraper"></a>web scraper</h3><p><a href="https://www.webscraper.io/cloud-scraper?utm_source=extension&amp;utm_medium=popup" target="_blank" rel="noopener">官网链接</a></p>
+<p>这是一个比较强大的chrome插件，一般点的网站都可以爬，但是有一些动态加载的网页爬不了。总之一句话就是快捷，方便，不用你写一行代码</p>
+<p>使用方法也很简单</p>
+<ol>
+<li>F12 + webscraper</li>
+<li><p>Create new sitemap</p>
+</li>
+<li><p>输入自定义的名字，再复制粘贴导航栏的链接，点击下方按键创建Sitemap</p>
+<img src="/2019/06/07/新手向-网络爬虫教程/1559891917084.png" title="爬虫原理">
+</li>
+<li><p>创建完毕之后，点下方蓝色<code>Add new selector</code>添加选择器，随便起一个id，type类型选择你要爬取的类型，比如说我们要爬知乎的热榜链接</p>
+<img src="/2019/06/07/新手向-网络爬虫教程/1559892142698.png" title="爬虫原理">
+</li>
+<li><p>选择完毕后会变成红色，点击上方蓝色按钮<code>Done selecting!</code> （这时候你已经可以点Data preview看到数据了）</p>
+</li>
+<li><p>完毕后点最下方蓝色按钮<code>save selector</code> </p>
+<img src="/2019/06/07/新手向-网络爬虫教程/1559892199352.png" title="爬虫原理">
+</li>
+<li><p>点击Scrape，时间间隔和延迟默认是2000ms（等网页加载完毕），然后直接点<code>start scraping</code>，出来一个弹窗后又自动关闭，可能会显示<code>No data scraped yet</code>, 但是别慌，refresh一下</p>
+</li>
+</ol>
+<p>出现结果：</p>
+  <img src="/2019/06/07/新手向-网络爬虫教程/1559892563963.png" title="爬虫原理">
+<p>你可以选择输出为 CSV表格格式</p>
+  <img src="/2019/06/07/新手向-网络爬虫教程/1559892642689.png" title="爬虫原理">
+<p>完成，不用一行代码轻松搞定，据我们老师说，这个插件可以爬绝大部分网页，基本上浏览器中能看到的数据都能爬，而且由于该插件原理是完全模拟浏览器访问，所以很少会被反爬虫。</p>
+<p>但是有的情况，webscraper不能使用，就是网页信息被覆盖（比如上面覆盖一个div，图片之类），也就是说，根本select不中，那。。。就只好乖乖用python了。</p>
+<h1 id="python-爬虫"><a href="#python-爬虫" class="headerlink" title="python 爬虫"></a>python 爬虫</h1><p>原理嘛。。。之前我摘抄过一篇网上大佬写的教程，<a href="https://laptprime.github.io/2019/06/07/python%E7%88%AC%E8%99%AB%E5%85%A5%E9%97%A8%E5%8E%9F%E7%90%86/">链接</a></p>
+<p>需要的基础嘛。。。一点点前端知识？其实就算你连前端知识都没有，其实也可以懂。</p>
+<p>个人觉得，光靠这些理论知识是学不到爬虫的精髓的，我们还是要通过实战了解爬虫。</p>
+<h1 id="第一个实战："><a href="#第一个实战：" class="headerlink" title="第一个实战："></a>第一个实战：</h1><p><a href="http://www.win4000.com/" target="_blank" rel="noopener">一个壁纸网站： http://www.win4000.com</a> </p>
+<p>我们想要做的，是用爬虫，自动下载该网站上的壁纸图片，为什么要选这个网站？</p>
+<ol>
+<li>友好，没有反爬虫，适合新手</li>
+<li><del>里面可以找到我的纸片人老婆</del> </li>
+</ol>
+<h3 id="爬虫第一步：观察这个网站"><a href="#爬虫第一步：观察这个网站" class="headerlink" title="爬虫第一步：观察这个网站"></a>爬虫第一步：观察这个网站</h3><p>随便打开一个标签（<del>一眼就看到了老婆</del>）：</p>
+  <img src="/2019/06/07/新手向-网络爬虫教程/1559894407779.png" title="爬虫原理">
+<p>发现这个网站有个特点：</p>
+<p>当点开某图片后：</p>
+  <img src="/2019/06/07/新手向-网络爬虫教程/1559894597789.png" title="爬虫原理">
+<p>会是这样一个大图（<del>三玖我老婆</del>），<strong>左右两边是下一张图片</strong>（这一点其实很重要）。</p>
+<p>我们在图片上方点击右键，在新标签页中打开图片，在导航栏，我们会看到这张图片的地址 <a href="http://pic1.win4000.com/mobile/2019-06-06/5cf8bbf2228ee.jpg" target="_blank" rel="noopener">http://pic1.win4000.com/mobile/2019-06-06/5cf8bbf2228ee.jpg</a> 。</p>
+<p>那么我们如何下载这张图片呢？你可能会说，直接右键保存不就行了？不不不，我说的是用python保存这个图片。</p>
+<p>打开py，输几行代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests			<span class="comment"># 调用request库</span></span><br><span class="line"></span><br><span class="line">target = <span class="string">'http://pic1.win4000.com/mobile/2019-06-06/5cf8bbf2228ee.jpg'</span>   <span class="comment">#目标链接</span></span><br><span class="line"></span><br><span class="line">response = requests.get(target)     <span class="comment"># get</span></span><br><span class="line">print(response)</span><br></pre></td></tr></table></figure>
+<p><strong>这时候的get返回的是一个包含服务器资源的Response对象。包含从服务器返回的所有的相关资源。</strong>(想知道更多百度吧)</p>
+<p>输出结果：<code>&lt;Response [200]&gt;</code></p>
+<p>哎？这个200好像是。。。没错，它就是<strong>相应码</strong>，200表示成功处理了请求，那。。。图片呢？</p>
+<p>response.content变为二进制数据，然后用<code>wb</code>的方式写入文件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">target = <span class="string">'http://pic1.win4000.com/mobile/2019-06-06/5cf8bbf2228ee.jpg'</span></span><br><span class="line"></span><br><span class="line">response = requests.get(target)</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">"F:/test/meizhuo/test.jpg"</span>, <span class="string">'wb'</span>) <span class="keyword">as</span> g:	<span class="comment">#图片保存地址，‘wb’方法</span></span><br><span class="line">    g.write(response.content)		<span class="comment">#写入文件</span></span><br><span class="line">    g.close()		<span class="comment">#关闭</span></span><br></pre></td></tr></table></figure>
+<p>执行完之后，图片就保存在电脑上了。</p>
+<p>等等，这样一张张的下载，还不如右键保存呢</p>
+<p>别急，这只是第一步，我们要做的是自动化的保存一堆图片</p>
+<p>然后我们回到之前大图的页面，<a href="http://www.win4000.com/mobile_detail_159009.html" target="_blank" rel="noopener">http://www.win4000.com/mobile_detail_159009.html</a> 点击右键查看网页源代码，然后 ctrl + f 搜索图片地址，我们有了如下结果：</p>
+  <img src="/2019/06/07/新手向-网络爬虫教程/1559895261701.png" title="爬虫原理">
+<p>橙色的（当然你也可以称它为橘色），前面是一个 img 标签，如果你不知道啥是 img 标签，没关系，知道他是一个标签就行，这个 img 标签中 src 和 url 都是图片的url地址，前面 class 值为：<code>pic-large</code> 。</p>
+<p>然后不小心看到了下面的上一张和下一张，还记得之前说过的网页的特点吗？对，左右翻页就是这个。</p>
+<p>在这个 class 名为 pic-o 的 div 标签中，有个 a 标签，其中有一个 href ，这里面有个我们想要的东西——下一页的链接（不妨打开看看是不是下一页）</p>
+<h3 id="于是，有了思路："><a href="#于是，有了思路：" class="headerlink" title="于是，有了思路："></a>于是，有了思路：</h3><ol>
+<li><strong>根据当前页面找到<code>pic-large</code>图片url地址，根据这个地址下载图片</strong>。</li>
+<li><strong>获取下一页链接</strong></li>
+<li><strong>循环1，2步</strong>。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">target = <span class="string">'http://www.win4000.com/mobile_detail_159009.html'</span></span><br><span class="line"></span><br><span class="line">response = requests.get(target)</span><br><span class="line">print(response.text)</span><br></pre></td></tr></table></figure>
+  <img src="/2019/06/07/新手向-网络爬虫教程/1559898630857.png" title="爬虫原理">
+<p>打印结果似曾相识，这不就是刚刚的源代码吗？那我们怎么从这一堆提取我们要的图片地址呢？</p>
+<p>我们需要一个第三方解析库：<strong>BeautifulSoup</strong> （还没装的同学赶紧装一下）还需要一个<strong>lxml</strong> （HTML解析库）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">target = <span class="string">'http://www.win4000.com/mobile_detail_159009.html'</span></span><br><span class="line"></span><br><span class="line">response = requests.get(target)</span><br><span class="line">response.encoding = <span class="string">'utf-8'</span>			<span class="comment">#用utf-8解码，不然会出现乱码</span></span><br><span class="line">bf = BeautifulSoup(response.content,<span class="string">'lxml'</span>)</span><br><span class="line"></span><br><span class="line">img = bf.select(<span class="string">'.pic-large'</span>)		<span class="comment">#选择class=pic-large的元素，注意前面的点</span></span><br><span class="line">print(img)</span><br></pre></td></tr></table></figure>
+<p>打印结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&lt;img alt=&quot;甜美动漫美女插画手机壁纸&quot; class=&quot;pic-large&quot; src=&quot;http://pic1.win4000.com/mobile/2019-06-06/5cf8bbf2228ee.jpg&quot; title=&quot;甜美动漫美女插画手机壁纸&quot; url=&quot;http://pic1.win4000.com/mobile/2019-06-06/5cf8bbf2228ee.jpg&quot;/&gt;]</span><br></pre></td></tr></table></figure>
+<p>是一个列表，提取其中仅有的一个元素，提取其中src的内容</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">img = bf.select(<span class="string">'.pic-large'</span>)</span><br><span class="line">pic = img[<span class="number">0</span>].get(<span class="string">'src'</span>)</span><br><span class="line">print(pic)</span><br></pre></td></tr></table></figure>
+<p>打印结果：就是我们要的图片地址链接。再利用之前的方法保存图片。</p>
+<p>然后，<strong>再用同样的方法获取下一页的链接，用同样的方法获取图片和下下一页的链接</strong>。</p>
+<p>最后代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">target = <span class="string">'http://www.win4000.com/mobile_detail_159009.html'</span></span><br><span class="line">num = int(input(<span class="string">"输入下载张数。。。"</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(num):</span><br><span class="line">    response = requests.get(target)</span><br><span class="line">    response.encoding = <span class="string">'utf-8'</span></span><br><span class="line">    bf = BeautifulSoup(response.content, <span class="string">'lxml'</span>)</span><br><span class="line"></span><br><span class="line">    img = bf.select(<span class="string">'.pic-large'</span>)</span><br><span class="line"></span><br><span class="line">    pic = requests.get(img[<span class="number">0</span>].get(<span class="string">'src'</span>))</span><br><span class="line">    print(<span class="string">"下载第 %d 张..."</span>%(i+<span class="number">1</span>), end=<span class="string">''</span>)</span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">"F:/test/meizhuo/test_%d.jpg"</span>%i, <span class="string">'wb'</span>) <span class="keyword">as</span> g:</span><br><span class="line">        g.write(pic.content)</span><br><span class="line">        g.close()</span><br><span class="line">    print(<span class="string">" yeah!!第 %d 张下载完成 =v="</span>%(i+<span class="number">1</span>), <span class="string">'\n'</span>,<span class="string">'-'</span>*<span class="number">10</span>)</span><br><span class="line">    targets_next = bf.select(<span class="string">'.pic-next-img'</span>)</span><br><span class="line">    targets_0 = targets_next[<span class="number">0</span>].select(<span class="string">'a'</span>)[<span class="number">0</span>].get(<span class="string">'href'</span>)</span><br></pre></td></tr></table></figure>
+  <img src="/2019/06/07/新手向-网络爬虫教程/1559899993829.png" title="爬虫原理">
+  <img src="/2019/06/07/新手向-网络爬虫教程/1559900239784.png" title="爬虫原理">
+<p>上个厕所的功夫，100张图片轻轻松松</p>
+<p>之后会教你们 进阶的爬虫 爬有道，爬豆瓣</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:1205319729@qq.com">laptprime</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://laptprime.github.io/2019/06/07/新手向-网络爬虫教程/">http://laptprime.github.io/2019/06/07/新手向-网络爬虫教程/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Python/">Python</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/2019/06/07/python爬虫入门原理/"><span>python爬虫入门原理</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="vcomment"></div><script src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@1.1.9-beta9/dist/Valine.min.js"></script><script>var notify = 'ture' == true ? true : false;
+var verify = 'ture' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'znVpwGlgXQrIAyAvwvqQ3n6V-gzGzoHsz',
+  appKey:'XUepma9DYxMmPSIx8YNkhh1T',
+  placeholder:'Leave a comment before u leave plz o(=v=)o',
+  avatar:'mm',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2018 - 2019 By laptprime</div><div class="framework-info"><span>Master - </span><a href="https://github.com/LaPtprime"><span>LaPt</span></a><span class="footer-separator">|</span><span>Theme - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="footer_custom_text">正在努力追赶大佬的脚步。。。</div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="/js/third-party/anime.min.js"></script><script src="/js/third-party/jquery.min.js"></script><script src="/js/third-party/jquery.fancybox.min.js"></script><script src="/js/third-party/velocity.min.js"></script><script src="/js/third-party/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.5.6"></script><script src="/js/fancybox.js?version=1.5.6"></script><script src="/js/sidebar.js?version=1.5.6"></script><script src="/js/copy.js?version=1.5.6"></script><script src="/js/fireworks.js?version=1.5.6"></script><script src="/js/transition.js?version=1.5.6"></script><script src="/js/scroll.js?version=1.5.6"></script><script src="/js/head.js?version=1.5.6"></script><script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":true}});</script></body></html>
