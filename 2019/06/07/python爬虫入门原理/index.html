@@ -1,0 +1,106 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="python爬虫入门原理"><meta name="keywords" content="Python"><meta name="author" content="laptprime,1205319729@qq.com"><meta name="copyright" content="laptprime"><link rel="shortcut icon" href="favicon.ico"><title>python爬虫入门原理 | welcome to lambor's blog</title><link rel="shortcut icon" href="/my-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.5.6"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css?version=1.5.6"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><link rel="shortcut icon" href="favicon.ico"><link rel="manifest" href="/manifest.json"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#000000"><meta name="msapplication-TileColor" content="#000000"><link rel="mask-icon" color="#000000"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script></head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、爬虫是什么？"><span class="toc-number">1.</span> <span class="toc-text">一、爬虫是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、爬虫的基本流程："><span class="toc-number">2.</span> <span class="toc-text">二、爬虫的基本流程：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、http协议-请求与响应"><span class="toc-number">3.</span> <span class="toc-text">三、http协议 请求与响应</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、-request"><span class="toc-number">4.</span> <span class="toc-text">四、 request</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、-响应Response"><span class="toc-number">5.</span> <span class="toc-text">五、 响应Response</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、总结"><span class="toc-number">6.</span> <span class="toc-text">六、总结</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://i.ibb.co/2nKPjcx/ef12afc6196939c7fb84efa8c3d675b6148ea832-jpg-1320w-742h.jpg"></div><div class="author-info__name text-center">laptprime</div><div class="author-info__description text-center">路还很长。。。</div><div class="follow-button"><a href="https://github.com/LaPtprime" target="_blank">Follow</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">19</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">4</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://i.ibb.co/tqymjRv/banner.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">welcome to lambor's blog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="post-info"><div id="post-title">python爬虫入门原理</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-06-07</time></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h2 id="一、爬虫是什么？"><a href="#一、爬虫是什么？" class="headerlink" title="一、爬虫是什么？"></a>一、爬虫是什么？</h2><p>如果我们把互联网比作一张大的蜘蛛网，数据便是存放于蜘蛛网的各个节点，而爬虫就是一只小蜘蛛，沿着网络抓取自己的猎物（数据）爬虫指的是：向网站发起请求，获取资源后分析并提取有用数据的程序；从技术层面来说就是 通过程序模拟浏览器请求站点的行为，把站点返回的HTML代码/JSON数据/二进制数据（图片、视频） 爬到本地，进而提取自己需要的数据，存放起来使用。</p>
+<h2 id="二、爬虫的基本流程："><a href="#二、爬虫的基本流程：" class="headerlink" title="二、爬虫的基本流程："></a>二、爬虫的基本流程：</h2><p>用户获取网络数据的方式：</p>
+<p>方式1：浏览器提交请求—&gt;下载网页代码—&gt;解析成页面</p>
+<p>方式2：模拟浏览器发送请求(获取网页代码)-&gt;提取有用的数据-&gt;存放于数据库或文件中</p>
+<p>爬虫要做的就是方式2；</p>
+<p><img src="C:\Users\12053\Desktop\爬虫2.assets\1122865-20171109155753419-1411600537.png" alt="img"></p>
+<p><strong>1、发起请求</strong></p>
+<p>使用http库向目标站点发起请求，即发送一个Request</p>
+<p>Request包含：请求头、请求体等 </p>
+<p>Request模块缺陷：不能执行JS 和CSS 代码</p>
+<p><strong>2、获取响应内容</strong></p>
+<p>如果服务器能正常响应，则会得到一个Response</p>
+<p>Response包含：html，json，图片，视频等</p>
+<p><strong>3、解析内容</strong></p>
+<p>解析html数据：正则表达式（RE模块），第三方解析库如Beautifulsoup，pyquery等</p>
+<p>解析json数据：json模块</p>
+<p>解析二进制数据:以<code>wb</code>的方式写入文件（后面讲）</p>
+<p><strong>4、保存数据</strong></p>
+<p>数据库（MySQL，Mongdb、Redis）</p>
+<p>文件</p>
+<h2 id="三、http协议-请求与响应"><a href="#三、http协议-请求与响应" class="headerlink" title="三、http协议 请求与响应"></a>三、http协议 请求与响应</h2><p>Request：用户将自己的信息通过浏览器（socket client）发送给服务器（socket server）</p>
+<p>Response：服务器接收请求，分析用户发来的请求信息，然后返回数据（返回的数据中可能包含其他链接，如：图片，js，css等）</p>
+<p>ps：浏览器在接收Response后，会解析其内容来显示给用户，而爬虫程序在模拟浏览器发送请求然后接收Response后，是要提取其中的有用数据</p>
+<h2 id="四、-request"><a href="#四、-request" class="headerlink" title="四、 request"></a>四、 request</h2><p><strong>1、请求方式：</strong></p>
+<p>常见的请求方式：GET / POST</p>
+<p><strong>2、请求的URL</strong></p>
+<p>url全球统一资源定位符，用来定义互联网上一个唯一的资源 例如：一张图片、一个文件、一段视频都可以用url唯一确定</p>
+<blockquote>
+<p>url编码</p>
+<p><code>https://www.baidu.com/s?wd=图片</code></p>
+<p>图片会被编码</p>
+<p>编码后：<code>https%3a%2f%2fwww.baidu.com%2fs%3fwd%3d%e5%9b%be%e7%89%87</code></p>
+</blockquote>
+<p>编码的问题会后面讲（总之就是将中文和其他字符转换方便传输）     <a href="http://tool.chinaz.com/Tools/urlencode.aspx" target="_blank" rel="noopener">一个在线url编码的工具</a></p>
+<p>网页的加载过程是：</p>
+<p>加载一个网页，通常都是先加载document文档，</p>
+<p>在解析document文档的时候，遇到链接，则针对超链接发起下载图片的请求</p>
+<p><strong>3、请求头</strong></p>
+<p>User-agent：请求头中如果没有user-agent客户端配置，服务端可能将你当做一个非法用户host；</p>
+<p>cookies：cookie用来保存登录信息（我这个截图刚好没有）</p>
+<p>注意： 一般做爬虫都会加上请求头</p>
+<p><img src="C:\Users\12053\Desktop\爬虫2.assets\1559875401666.png" alt="1559875401666"></p>
+<p><strong>请求头需要注意的参数：</strong></p>
+<p>（1）Referrer：访问源至哪里来（一些大型网站，会通过Referrer 做防盗链策略；所有爬虫也要注意模拟）</p>
+<p>（2）User-Agent:访问的浏览器（要加上否则会被当成爬虫程序）</p>
+<p>（3）cookie：请求头注意携带</p>
+<p><strong>4、请求体</strong></p>
+<p>请求体<br>​    如果是get方式，请求体没有内容 （get请求的请求体放在 url后面参数中，直接能看到）<br>​    如果是post方式，请求体是format data</p>
+<p>ps：<br>​    1、登录窗口，文件上传等，信息都会被附加到请求体内<br>​    2、登录，输入错误的用户名密码，然后提交，就可以看到post，正确登录后页面通常会跳转，无法捕捉到post</p>
+<h2 id="五、-响应Response"><a href="#五、-响应Response" class="headerlink" title="五、 响应Response"></a>五、 响应Response</h2><p><strong>1、响应状态码</strong></p>
+<p>　　200：代表成功</p>
+<p>　　301：代表跳转</p>
+<p>　　404：文件不存在</p>
+<p>　　403：无权限访问</p>
+<p>　　502：服务器错误</p>
+<p><strong>2、respone header</strong></p>
+<p><img src="C:\Users\12053\Desktop\爬虫2.assets\1559875668406.png" alt="1559875668406"></p>
+<p><strong>响应头需要注意的参数：</strong></p>
+<p>（1）Set-Cookie:BDSVRTM=0; path=/：可能有多个，是来告诉浏览器，把cookie保存下来</p>
+<p>（2）Content-Location：服务端响应头中包含Location返回浏览器之后，浏览器就会重新访问另一个页面</p>
+<p><strong>3、相应体（preview就是网页源代码）</strong></p>
+<p>最主要的部分，包含请求资源的内容，如网页HTMl,图片，JSO数据，二进制数据等</p>
+<p><strong>4、解析数据：</strong></p>
+<ol>
+<li>直接处理</li>
+<li>Json解析</li>
+<li>正则表达式处理</li>
+<li>BeautifulSoup解析处理</li>
+<li>PyQuery解析处理</li>
+<li>XPath解析处理</li>
+</ol>
+<p><strong>5、保存数据</strong></p>
+<p>文本：纯文本，Json,Xml等</p>
+<p>关系型数据库：如mysql,oracle,sql server等结构化数据库</p>
+<p>非关系型数据库：MongoDB,Redis等key-value形式存储</p>
+<h2 id="六、总结"><a href="#六、总结" class="headerlink" title="六、总结"></a>六、总结</h2><p><strong>1、总结爬虫流程：</strong></p>
+<p> 爬取—&gt;解析—&gt;存储</p>
+<p>基本上是复制粘贴的，略有改动</p>
+<p><a href="https://www.cnblogs.com/sss4/p/7809821.html" target="_blank" rel="noopener">原文链接</a></p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:1205319729@qq.com">laptprime</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://laptprime.github.io/2019/06/07/python爬虫入门原理/">http://laptprime.github.io/2019/06/07/python爬虫入门原理/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Python/">Python</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/2019/04/16/上网科学/"><span>上网科学</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="vcomment"></div><script src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@1.1.9-beta9/dist/Valine.min.js"></script><script>var notify = 'ture' == true ? true : false;
+var verify = 'ture' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'znVpwGlgXQrIAyAvwvqQ3n6V-gzGzoHsz',
+  appKey:'XUepma9DYxMmPSIx8YNkhh1T',
+  placeholder:'Leave a comment before u leave plz o(=v=)o',
+  avatar:'mm',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2018 - 2019 By laptprime</div><div class="framework-info"><span>Master - </span><a href="https://github.com/LaPtprime"><span>LaPt</span></a><span class="footer-separator">|</span><span>Theme - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="footer_custom_text">正在努力追赶大佬的脚步。。。</div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="/js/third-party/anime.min.js"></script><script src="/js/third-party/jquery.min.js"></script><script src="/js/third-party/jquery.fancybox.min.js"></script><script src="/js/third-party/velocity.min.js"></script><script src="/js/third-party/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.5.6"></script><script src="/js/fancybox.js?version=1.5.6"></script><script src="/js/sidebar.js?version=1.5.6"></script><script src="/js/copy.js?version=1.5.6"></script><script src="/js/fireworks.js?version=1.5.6"></script><script src="/js/transition.js?version=1.5.6"></script><script src="/js/scroll.js?version=1.5.6"></script><script src="/js/head.js?version=1.5.6"></script><script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":true}});</script></body></html>
